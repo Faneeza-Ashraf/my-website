@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ember & Gold | Fine Dining Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="logo">Ember<span>&</span>Gold</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reservations">Reservations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Fine Dining Since 1998</p>
+        <h1>Taste the Extraordinary</h1>
+        <p class="subtitle">Seasonal ingredients, wood-fired flavors, and unforgettable evenings, crafted with passion.</p>
+        <a href="#reservations" class="btn">Book a Table</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-text">
+          <p class="eyebrow">Our Story</p>
+          <h2>A Passion Kindled by Fire</h2>
+          <p>Ember &amp; Gold began in 1998 as a tiny family kitchen with one wood-fired oven and a belief that great food brings people together. Over twenty-five years later, that belief still guides every plate we serve.</p>
+          <p>We partner with local farmers and artisans, cooking with the seasons and letting honest ingredients speak. Every dish is a love letter to craft, warmth, and hospitality.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Chef plating a dish in the restaurant kitchen" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our Menu</p>
+          <h2>Crafted With Care</h2>
+        </div>
+
+        <div class="filters" role="tablist">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="starters">Starters</button>
+          <button class="filter-btn" data-filter="mains">Main Courses</button>
+          <button class="filter-btn" data-filter="desserts">Desserts</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-item" data-category="starters">
+            <div class="item-top"><h3>Burrata &amp; Heirloom Tomato</h3><span class="price">$14</span></div>
+            <p>Creamy burrata, basil oil, aged balsamic, and toasted sourdough.</p>
+          </article>
+          <article class="menu-item" data-category="starters">
+            <div class="item-top"><h3>Crispy Calamari</h3><span class="price">$12</span></div>
+            <p>Lightly fried with lemon aioli and smoked paprika.</p>
+          </article>
+          <article class="menu-item" data-category="starters">
+            <div class="item-top"><h3>Wild Mushroom Soup</h3><span class="price">$10</span></div>
+            <p>Velvety porcini broth finished with truffle cream.</p>
+          </article>
+
+          <article class="menu-item" data-category="mains">
+            <div class="item-top"><h3>Wood-Fired Ribeye</h3><span class="price">$38</span></div>
+            <p>12oz ribeye, roasted garlic butter, and charred seasonal vegetables.</p>
+          </article>
+          <article class="menu-item" data-category="mains">
+            <div class="item-top"><h3>Pan-Seared Salmon</h3><span class="price">$29</span></div>
+            <p>Citrus glaze, saffron risotto, and microgreens.</p>
+          </article>
+          <article class="menu-item" data-category="mains">
+            <div class="item-top"><h3>Wild Mushroom Pappardelle</h3><span class="price">$24</span></div>
+            <p>Fresh pasta, thyme, parmesan, and a splash of white wine.</p>
+          </article>
+
+          <article class="menu-item" data-category="desserts">
+            <div class="item-top"><h3>Molten Chocolate Cake</h3><span class="price">$11</span></div>
+            <p>Warm dark chocolate center with vanilla bean gelato.</p>
+          </article>
+          <article class="menu-item" data-category="desserts">
+            <div class="item-top"><h3>Classic Tiramisu</h3><span class="price">$10</span></div>
+            <p>Espresso-soaked ladyfingers and mascarpone cream.</p>
+          </article>
+          <article class="menu-item" data-category="desserts">
+            <div class="item-top"><h3>Honey Panna Cotta</h3><span class="price">$9</span></div>
+            <p>Silky vanilla cream, golden honey, and toasted pistachios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservations -->
+    <section class="section reservations" id="reservations">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Reservations</p>
+          <h2>Reserve Your Table</h2>
+        </div>
+
+        <form id="reservation-form" class="form" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe">
+            <small class="error"></small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com">
+            <small class="error"></small>
+          </div>
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+            <small class="error"></small>
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time">
+            <small class="error"></small>
+          </div>
+          <div class="form-group full">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" placeholder="2">
+            <small class="error"></small>
+          </div>
+          <button type="submit" class="btn full">Confirm Reservation</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Success Modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="check">✓</div>
+      <h3 id="modal-title">Reservation Confirmed!</h3>
+      <p id="modal-text"></p>
+      <button class="btn" id="modal-close">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo">Ember<span>&</span>Gold</a>
+        <p class="footer-note">Fire, flavor, and hospitality in the heart of the city.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <p>123 Gold Street<br>Downtown, NY 10001</p>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <p>Mon – Thu: 12pm – 10pm<br>Fri – Sat: 12pm – 12am<br>Sun: 1pm – 9pm</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567<br>hello@embergold.com</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Ember &amp; Gold. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
